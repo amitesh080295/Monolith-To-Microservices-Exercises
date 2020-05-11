@@ -1,20 +1,18 @@
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function getDate() {
+function getData() {
   return new Date();
 }
 
 async function main() {
-  while(true) {
-    try  {
+  while (true) {
+    try {
       console.log(getData());
-    }
-    catch(e) {
+    } catch (e) {
       console.log(e);
-    }
-    finally {
+    } finally {
       await sleep(5000);
     }
   }
